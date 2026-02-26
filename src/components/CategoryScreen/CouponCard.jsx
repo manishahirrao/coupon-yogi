@@ -2,7 +2,7 @@
 const CouponCard = ({ heading, description, image, link, cost }) => {
   // const randomNum = Math.floor(Math.random() * 99);
   return (
-    <div className="m-3 mt-6 relative w-68 shadow-lg rounded-br-4xl rounded-bl-4xl rounded-t-2xl shadow-xl shadow-gray-900">
+    <div className="m-3 mt-6 relative w-68 rounded-br-4xl rounded-bl-4xl rounded-t-2xl shadow-xl shadow-gray-900">
       {/* Top Section (Brown Background) */}
       <div className="bg-[#786a41] p-6 h-13 rounded-t-2xl relative">
         {/* Product Image */}

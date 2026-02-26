@@ -1,32 +1,34 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, lazy, Suspense } from "react";
 import { useParams } from "react-router-dom";
 import { Star, ShieldCheck, Tag } from "lucide-react";
 import { motion } from "framer-motion";
 import { trendingStores } from "../Category";
 import CouponCard from "./CouponCard";
 import InfoSection from "./InfoSection";
-import BannerSection from "./BannerSection";
-import FinanceBanner from "./FinanceBanner";
-import GrowBanner from "./GrowBanner";
-import BybitBanner from "./BybitBanner";
-import BitgetBanner from "./BitgetBanner";
-import BinanceBanner from "./BinanceBanner";
-import MexcBanner from "./MexcBanner";
-import WazirxBanner from "./WazirxBanner";
-import KucoinBanner from "./KucoinBanner";
-import BitvavoBanner from "./BitvavoBanner";
-import PhemexBanner from "./PhemexBanner";
-import BingxBanner from "./BingxBanner";
-import CountryBanner from "./CountrydelightBanner";
-import HostingerBanner from "./HostingerBanner";
-import WeexBanner from "./WeexBanner";
-import QxBanner from "./QxBanner";
-import E8Banner from "./E8Banner";
-import AlphaBanner from "./AlphaBanner";
-import FounderBanner from "./FounderBanner";
-import XtBanner from "./XtBanner";
-import BlofinBanner from "./BlofinBanner";
-import KvbBanner from "./KvbBanner";
+
+// Lazy load banner components for better performance
+const BannerSection = lazy(() => import("./BannerSection"));
+const FinanceBanner = lazy(() => import("./FinanceBanner"));
+const GrowBanner = lazy(() => import("./GrowBanner"));
+const BybitBanner = lazy(() => import("./BybitBanner"));
+const BitgetBanner = lazy(() => import("./BitgetBanner"));
+const BinanceBanner = lazy(() => import("./BinanceBanner"));
+const MexcBanner = lazy(() => import("./MexcBanner"));
+const WazirxBanner = lazy(() => import("./WazirxBanner"));
+const KucoinBanner = lazy(() => import("./KucoinBanner"));
+const BitvavoBanner = lazy(() => import("./BitvavoBanner"));
+const PhemexBanner = lazy(() => import("./PhemexBanner"));
+const BingxBanner = lazy(() => import("./BingxBanner"));
+const CountryBanner = lazy(() => import("./CountrydelightBanner"));
+const HostingerBanner = lazy(() => import("./HostingerBanner"));
+const WeexBanner = lazy(() => import("./WeexBanner"));
+const QxBanner = lazy(() => import("./QxBanner"));
+const E8Banner = lazy(() => import("./E8Banner"));
+const AlphaBanner = lazy(() => import("./AlphaBanner"));
+const FounderBanner = lazy(() => import("./FounderBanner"));
+const XtBanner = lazy(() => import("./XtBanner"));
+const BlofinBanner = lazy(() => import("./BlofinBanner"));
+const KvbBanner = lazy(() => import("./KvbBanner"));
 
 const CategoryDetail = () => {
   const [categoryData, setCategoryData] = useState(null);
@@ -115,6 +117,7 @@ const CategoryDetail = () => {
   ) : (
     <div className="bg-gray-50">
       {/* Banner Section */}
+      <Suspense fallback={<div className="h-[500px] bg-gray-900 animate-pulse"></div>}>
       {ProductName === "Finance courses" ? (
         <FinanceBanner link="" />
       ) : ProductName == "Country delight" ? (
@@ -307,6 +310,7 @@ const CategoryDetail = () => {
           }}
         />
       )}
+      </Suspense>
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

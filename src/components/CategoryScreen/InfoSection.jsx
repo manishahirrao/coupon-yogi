@@ -1,5 +1,7 @@
 import { ChevronDown, ChevronUp, Gift } from "lucide-react";
 import { useState } from "react";
+import PropTypes from "prop-types";
+
 function InfoSection({ Product }) {
   const [isOpen, setIsOpen] = useState(false);
   const data = {
@@ -777,5 +779,9 @@ function InfoSection({ Product }) {
     </div>
   );
 }
+
+InfoSection.propTypes = {
+  Product: PropTypes.string.isRequired,
+};
 
 export default InfoSection;

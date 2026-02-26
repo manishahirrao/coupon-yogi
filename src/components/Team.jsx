@@ -184,7 +184,7 @@ const Team = () => {
           </p>
         </div>
 
-        <div className="bg-gradient-to-r from-green-100 to-gray-100 w-full h-auto flex flex-wrap justify-around gap-8 px-4 py-12 shadow-xl border border-gray-100 h-64 mb-16 rounded-lg">
+        <div className="bg-gradient-to-r from-green-100 to-gray-100 w-full h-64 flex flex-wrap justify-around gap-8 px-4 py-12 shadow-xl border border-gray-100 mb-16 rounded-lg">
           {[
             "Changing The Future of Work EdTechX",
             "Top 10 European EdTechs Based on Web Traffic Runa Capital Award",
@@ -215,7 +215,7 @@ const Team = () => {
             Senior Expert Contributor
           </h2>
           <div className="bg-gradient-to-r from-green-100 to-gray-100 backdrop-blur-lg rounded-lg p-6 shadow-xl border border-gray-100">
-            <div className="flex flex-col md:flex-row items-center md:items-start gap-6 items-center">
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
               <div className="w-full md:w-1/2 flex justify-center">
                 <img
                   src={seniorExpert.image}
@@ -305,6 +305,33 @@ const Team = () => {
               </button>
             </div>
           ))}
+        </div>
+
+        {/* Legal Main Section */}
+        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center mt-16">
+          Legal Main
+        </h2>
+        <div className="flex justify-center">
+          <div className="bg-gradient-to-r from-green-100 to-gray-100 shadow-lg rounded-lg p-8 flex flex-col items-center text-center border border-gray-100 hover:border-green-200 transition-colors max-w-md">
+            <img
+              src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&q=80&w=400"
+              alt="Ujjwal Singh"
+              className="w-32 h-32 rounded-full object-cover mb-6 border-4 border-green-500"
+            />
+            <h3 className="text-2xl font-bold text-gray-900 mb-2">
+              Ujjwal Singh
+            </h3>
+            <p className="text-green-600 font-medium mb-2">Legal Adviser</p>
+            <p className="text-green-700 text-sm mb-6">
+              Corporate Law, Compliance, Contract Management
+            </p>
+            <p className="text-gray-600 text-sm mb-6">
+              Ujjwal Singh is an experienced advocate specializing in corporate law, regulatory compliance, and contract management. With extensive expertise in legal consulting for startups and enterprises, he ensures that businesses operate within legal frameworks while minimizing risks and maximizing opportunities.
+            </p>
+            <button className="mt-4 px-6 py-2 bg-green-600 text-white rounded-full hover:bg-green-700 transition-colors">
+              Read more
+            </button>
+          </div>
         </div>
       </div>
     </div>

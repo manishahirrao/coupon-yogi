@@ -51,7 +51,7 @@ import GetResponse from "./MarkingImages/GetResponse.jpg";
 
 const categories = [
   {
-    img: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&q=80&w=2070",
+    img: "/images/education.jpg",
     discount: "UP TO 40% OFF",
     name: "Education",
     transform: "rotate-1 translate-y-2",
